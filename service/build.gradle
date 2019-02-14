@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile project(':service-idl')
+
+    compile "com.google.protobuf:protobuf-java:$protobufVersion"
+    
+    compile 'io.rsocket.rpc:rsocket-rpc-core:0.2.12'
+    compile 'io.rsocket:rsocket-transport-netty:0.11.16'
+
+    compile "org.apache.logging.log4j:log4j-api:$log4jVersion"
+    compile "org.apache.logging.log4j:log4j-core:$log4jVersion"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion"
+}
+
+mainClassName = 'io.netifi.rsocket.example.service.Main'
