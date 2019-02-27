@@ -1,4 +1,4 @@
-rootProject.name = 'proteus-quickstart'
+rootProject.name = 'rsocket-rpc-quickstart'
 include 'client'
 include 'service'
 include 'service-idl'
