@@ -1,7 +1,43 @@
 # rsocket-rpc-example
 
+To build this project, issue the following command:
+
+`./gradlew build`
+
+Then, in one terminal, start the example RSocket RPC service by issuing the
+following command:
+
+`./gradlew :service:run`
+
+That command will eventually output the following:
+
+`<===========--> 90% EXECUTING`
+
+That output indicates that the service is ready to accept connections from
+clients. In another terminal, while the service is still running, issue the
+following command:
+
+`./gradlew :client:run`
+
+That starts a client that connects to the service. You will see some output
+from its interactions. You can review the code to see what this service
+accomplishes:
+
+**Interface Definition:**
+
+* `service-idl/build/resources/main/service.proto`
+
+**Client:**
+
+* `client/src/main/java/io/netifi/rsocket/example/client/Main.java`
+
+**Service:**
+
+* `service/src/main/java/io/netifi/rsocket/example/service/DefaultSimpleService.java`
+* `service/src/main/java/io/netifi/rsocket/example/service/Main.java`
+
 ## Bugs and Feedback
-For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/proteus-quickstart/issues).
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/rsocket-rpc-example/issues).
 
 ## License
 Copyright 2019 [Netifi Inc.](https://www.netifi.com)

@@ -1,13 +1,12 @@
 subprojects {
     apply plugin: 'idea'
 
-    group 'io.netifi.proteus.quickstart'
+    group 'io.netifi.rsocket.quickstart'
     version '1.5.3'
 
-    // Proteus Versions
+    // Versions
     ext {
         protobufVersion = '3.6.1'
-        proteusVersion = '1.5.5'
         rsocketRpcVersion = '0.2.12'
         log4jVersion = '2.9.1'
     }
